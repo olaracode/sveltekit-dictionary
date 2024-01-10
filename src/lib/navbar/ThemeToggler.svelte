@@ -3,7 +3,6 @@
   const themeStore = getContext("themeStore");
 
   function themeToggler() {
-    console.log($themeStore, $themeStore === "light");
     localStorage.setItem("theme", $themeStore === "light" ? "dark" : "light");
     themeStore.set($themeStore === "light" ? "dark" : "light");
   }

@@ -1,5 +1,6 @@
 <script>
   import Navbar from "../lib/navbar/Navbar.svelte";
+  import Searchbar from "../lib/Searchbar.svelte";
   import { onMount, setContext } from "svelte";
   import { writable } from "svelte/store";
   import { browser } from "$app/environment";
@@ -21,5 +22,6 @@
 
 <div class="dark:bg-slate-900 dark:text-white min-h-screen">
   <Navbar />
+  <Searchbar />
   <slot />
 </div>
