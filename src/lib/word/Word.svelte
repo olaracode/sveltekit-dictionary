@@ -4,8 +4,14 @@
   export let word = [];
 
   function findMatch(objects, key) {
-    const foundObject = objects.find((obj) => obj.hasOwnProperty(key));
-    return foundObject[key] || null;
+    const foundObject = objects.find(
+      (obj) => obj.hasOwnProperty(key) && obj[key] !== ""
+    );
+
+    if (foundObject) {
+      return foundObject[key];
+    }
+    return null;
   }
   function findFirstText(objects) {
     const foundObject = objects.find((obj) => obj.hasOwnProperty("text"));
